@@ -1,7 +1,7 @@
 {
     "name": "falcon758/exads_exercices",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Exads Exercises",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
