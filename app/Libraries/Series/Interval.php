@@ -94,13 +94,13 @@ class Interval implements IntervalInterface
         $currentWeekDay  = (int) date('N', $timestamp);
         $currentHour     = date('H:i:s', $timestamp);
 
-        if ($weekday === $currentWeekDay && strtotime($hour) <= strtotime($currentHour)) {
+        if ($weekday === $currentWeekDay && strtotime($hour) >= strtotime($currentHour)) {
             return date('Y-m-d', $timestamp) . ' ' . $hour;
         }
 
         $daysRemaining = $weekday - $currentWeekDay;
 
-        if ($daysRemaining < 0) {
+        if ($daysRemaining <= 0) {
             $daysRemaining = 7 - abs($daysRemaining);
         }
 
